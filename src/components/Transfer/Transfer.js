@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Transfer.css'
+import {Link} from 'react-router-dom'
 export class Transfer extends Component {
     state = {
         account: '',
@@ -10,6 +11,10 @@ export class Transfer extends Component {
         return (
             <div className='Transfer'>
                 Transfer
+                <Link to='/dashboard'>
+                <button>Cancel</button>
+                </Link>
+                <button>Submit</button>
             </div>
         )
     }
