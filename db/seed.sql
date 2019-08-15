@@ -12,7 +12,6 @@ hash TEXT
 CREATE TABLE account (
 account_id SERIAL PRIMARY KEY ,
 user_id INT REFERENCES user_info(user_id),
-account_number INT,
 account_balance INT 
 );
 
@@ -25,3 +24,9 @@ transfer_amount INT
 
 INSERT INTO user_info(username, email)
 VALUES ('Jonathan', 'jon@than.com')
+
+
+DROP TABLE IF EXISTS credentials;
+DROP TABLE IF EXISTS transfer;
+DROP TABLE IF EXISTS account;
+DROP TABLE IF  EXISTS user_info;
